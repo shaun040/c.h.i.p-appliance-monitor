@@ -30,6 +30,7 @@ Your OS should now be ready to boot and automatically jump on your home network!
 # Step 2: Create the software
 
 After you ssh to the C.H.I.P, we will create a virtualenv for the application and install a few essential libraries:
+
     $ sudo apt-get install python-pip 
     $ sudo pip install --upgrade virtualenv
     $ sudo adduser --system vibration
