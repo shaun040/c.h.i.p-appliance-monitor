@@ -20,19 +20,23 @@ This works on clothes washers and dryers, dishwashers, garage door openers, fans
 
 Your OS should now be ready to boot and automatically jump on your home network!
 
-# Step 1: Create the hardware
+# Step 1: Create Virtual Environment
+
+
+# Step 2: Create the hardware
 
 3. Add the 801s Vibration Sensor to [C.H.I.P GPIO pins](https://docs.getchip.com/chip.html#pin-headers). I had to purchase some male to female jumper wires as the pins for the sensor don't line up VCC and GND side by side on the C.H.I.P. Ordered these on Amazon (https://www.amazon.com/gp/product/B00AC4NQYG/ref=oh_aui_detailpage_o05_s00?ie=UTF8&psc=1) <ADD PINS>
 > Multiple sensor expert mode: Connect additional vibration modules to the same (or any) 5V and GND pins, but a different sensor GPIO pin. You'll want to use a very flexible or long cable, so one vibrating sensor doesn't vibrate everything.
 
 4. Plug in a power source, and you’re good to go.  Within a few seconds, you should be able to connect to the C.H.I.P with: “ssh chip@*{**unique host name**}*” (password: `chip`)
 
-# Step 2: Create the software
+# Step 3: Create the software
 
 After you ssh to the C.H.I.P, install a few essential libraries:
 
-    $ sudo apt-get install python-pip
-    $ sudo pip install requests tweepy slackclient CHIP-IO   
+    $ sudo apt-get install python-pip 
+    $ sudo pip install --upgrade virtualenv
+    $ pip install -r requirements.txt
     
 Set the timezone to make sure timestamps are correct
 
