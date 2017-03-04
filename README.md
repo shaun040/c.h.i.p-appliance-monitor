@@ -37,6 +37,12 @@ After you ssh to the C.H.I.P, install a few essential libraries:
     $ sudo apt-get install python-pip 
     $ sudo pip install --upgrade virtualenv
     $ pip install -r requirements.txt
+    $sudo apt-get update
+    $sudo apt-get install git build-essential python-dev python-pip flex bison chip-dt-overlays -y
+    $git clone git://github.com/xtacocorex/CHIP_IO.git
+    $cd CHIP_IO
+    $sudo python setup.py install
+    $cd ..
     
 Set the timezone to make sure timestamps are correct
 
