@@ -4,7 +4,7 @@ https://github.com/Shmoopty/rpi-appliance-monitor
 
 _Get **Tweets**, **Slack** messages, **PushBullet**, or **IFTTT triggers** notifications when appliances begin or end their cycles_
 
-These instructions are for a simple Raspberry Pi project that can make any old appliance smart, without having to operate on the appliance.  Just stick this tiny monitor onto it!
+These instructions are for a simple C.H.I.P project that can make any old appliance smart, without having to operate on the appliance.  Just stick this tiny monitor onto it!
 
 C.H.I.P Appliance Monitor makes use of the nicely sensitive 801s vibration sensor.  It will detect faint shaking and if the shaking lasts a specified amount of time, it will assume that the appliance is running. 
 
