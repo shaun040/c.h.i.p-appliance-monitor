@@ -38,7 +38,7 @@ Set the timezone to make sure timestamps are correct
 
 See Language & Location settings of C.H.I.P doc (https://docs.getchip.com/chip.html#settings-and-configuration)
 
-Create the program file [`/home/chip/vibration.py`](https://raw.githubusercontent.com/sfurey/chip-appliance-monitor/master/vibration.py) (Click to view)
+Create the program file [`/home/chip/vibration.py`](https://raw.githubusercontent.com/shaun040/c.h.i.p-appliance-monitor/master/vibration.py) (Click to view)
 
 Create the settings file [`/home/chip/vibration_settings.ini`](https://raw.githubusercontent.com/sfurey/chip-appliance-monitor/master/vibration_settings.ini).  This file specifies what sensor pin to monitor, what messages you want, and what services to send the message to. 
 
@@ -60,4 +60,4 @@ You’re done!  Reboot and test it out.
 
 Some mounting tape or Sugru will let you stick the device somewhere discrete on your appliance.
 
-![Completed device](https://cloud.githubusercontent.com/assets/1101856/21469692/1143d1fa-ca27-11e6-9986-e12b9c23e189.jpg "Completed device")
+![Completed device](https://raw.githubusercontent.com/shaun040/shaun040.github.io/master/2017-02-22.png "Completed device")
