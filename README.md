@@ -8,7 +8,7 @@ These instructions are for a simple Raspberry Pi project that can make any old a
 
 C.H.I.P Appliance Monitor makes use of the nicely sensitive 801s vibration sensor.  It will detect faint shaking and if the shaking lasts a specified amount of time, it will assume that the appliance is running. 
 
-![On Phone](https://cloud.githubusercontent.com/assets/1101856/21469770/5d91e94e-ca2b-11e6-8c9c-d28eb902aefb.jpg "On Phone")
+![On Phone](shaun040.github.io/16681841_10100253471478670_7449050954835591157_n.jpg "On Phone")
 
 This works on clothes washers and dryers, dishwashers, garage door openers, fans, furnaces, and other machines that vibrate.
 
