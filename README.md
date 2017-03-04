@@ -38,7 +38,7 @@ After you ssh to the C.H.I.P, install a few essential libraries:
     $ sudo pip install --upgrade virtualenv
     $ pip install -r requirements.txt
     
-    ## Install CHIP GPIO Python Library
+    Install CHIP GPIO Python Library
     
     $ sudo apt-get update
     $ sudo apt-get install git build-essential python-dev python-pip flex bison chip-dt-overlays -y
