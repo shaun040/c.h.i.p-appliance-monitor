@@ -75,7 +75,7 @@ def slack(msg):
 
 def send_alert(message):
     if len(message) > 1:
-        print message
+        print (message)
         if len(pushbullet_api_key) > 0:
             pushbullet(pushbullet_api_key, message)
         if len(pushbullet_api_key2) > 0:
