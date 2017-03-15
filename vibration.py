@@ -106,7 +106,7 @@ def vibrated(x):
     global vibrating
     global last_vibration_time
     global start_vibration_time
-    print 'Vibrated'
+    print ('Vibrated')
     last_vibration_time = time.time()
     if not vibrating:
         start_vibration_time = last_vibration_time
@@ -114,7 +114,7 @@ def vibrated(x):
 
 
 def heartbeat():
-    print 'HB'
+    print ('HB')
     current_time = time.time()
     global vibrating
     delta_vibration = last_vibration_time - start_vibration_time
@@ -129,7 +129,7 @@ def heartbeat():
 
 
 if len(sys.argv) == 1:
-    print "No config file specified"
+    print ("No config file specified")
     sys.exit()
 
 vibrating = False
@@ -163,6 +163,6 @@ GPIO.setup(sensor_pin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.add_event_detect(sensor_pin, GPIO.RISING)
 GPIO.add_event_callback(sensor_pin, vibrated)
 
-print 'Running config file {} monitoring GPIO pin {}'\
-      .format(sys.argv[1], str(sensor_pin))
+print ('Running config file {} monitoring GPIO pin {}'\
+      .format(sys.argv[1], str(sensor_pin)))
 threading.Timer(1, heartbeat).start()
