@@ -9,7 +9,7 @@ import urllib
 
 from ConfigParser import SafeConfigParser
 from tweepy import OAuthHandler as TweetHandler
-from slackclient import SlackClient
+#from slackclient import SlackClient
 
 def pushbullet(cfg, msg):
     try:
@@ -36,17 +36,17 @@ def iftt(msg):
     except:
         pass
 
-def slack_webhook(msg):
+#def slack_webhook(msg):
 
-    try:
-        payload = urllib.urlencode({'payload': '{"text": "' + msg+ '"}'})
-        headers = {"Content-type": "application/x-www-form-urlencoded", "Accept": "text/plain"}
-        response = requests.request("POST", slack_webhook , data=payload, headers=headers)
+#    try:
+#        payload = urllib.urlencode({'payload': '{"text": "' + msg+ '"}'})
+#        headers = {"Content-type": "application/x-www-form-urlencoded", "Accept": "text/plain"}
+#        response = requests.request("POST", slack_webhook , data=payload, headers=headers)
 
-    except (KeyboardInterrupt, SystemExit):
-        raise
-    except:
-        pass
+#    except (KeyboardInterrupt, SystemExit):
+#        raise
+#    except:
+#        pass
 
 def tweet(msg):
     try:
@@ -61,16 +61,16 @@ def tweet(msg):
         pass
 
 
-def slack(msg):
-    try:
-        slack = msg + ' ' + strftime("%Y-%m-%d %H:%M:%S", gmtime())
-        sc = SlackClient(slack_api_token)
-        sc.api_call(
-            'chat.postMessage', channel='#random', text=slack)
-    except (KeyboardInterrupt, SystemExit):
-        raise
-    except:
-        pass
+#def slack(msg):
+#    try:
+#        slack = msg + ' ' + strftime("%Y-%m-%d %H:%M:%S", gmtime())
+#        sc = SlackClient(slack_api_token)
+#        sc.api_call(
+ #           'chat.postMessage', channel='#random', text=slack)
+  #  except (KeyboardInterrupt, SystemExit):
+   #     raise
+    #except:
+     #   pass
 
 
 def send_alert(message):
@@ -82,10 +82,10 @@ def send_alert(message):
             pushbullet(pushbullet_api_key2, message)
         if len(twitter_api_key) > 0:
             tweet(message)
-        if len(slack_api_token) > 0:
-            slack(message)
-        if len (slack_webhook) > 0:
-            slack_webhook(message)
+       # if len(slack_api_token) > 0:
+        #    slack(message)
+        #if len (slack_webhook) > 0:
+         #   slack_webhook(message)
         if len(iftt_maker_channel_key) > 0:
             iftt(message)
 
@@ -151,8 +151,8 @@ twitter_api_key = config.get('twitter', 'api_key')
 twitter_api_secret = config.get('twitter', 'api_secret')
 twitter_access_token = config.get('twitter', 'access_token')
 twitter_access_token_secret = config.get('twitter', 'access_token_secret')
-slack_api_token = config.get('slack', 'api_token')
-slack_webhook = config.get('slack','webhook_url')
+#slack_api_token = config.get('slack', 'api_token')
+#slack_webhook = config.get('slack','webhook_url')
 iftt_maker_channel_event = config.get('iftt','maker_channel_event')
 iftt_maker_channel_key = config.get('iftt','maker_channel_key')
 
