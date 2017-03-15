@@ -139,7 +139,7 @@ start_vibration_time = last_vibration_time
 
 config = SafeConfigParser()
 config.read(sys.argv[1])
-#sensor_pin = "XIO-P1"
+sensor_pin = "XIO-P1"
 #sensor_pin = config.getint('main', 'SENSOR_PIN')
 begin_seconds = config.getint('main', 'SECONDS_TO_START')
 end_seconds = config.getint('main', 'SECONDS_TO_END')
